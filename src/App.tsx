@@ -36,7 +36,7 @@ const App = () => {
   
 
   return (
-    <form className="tutorial gap-2" onSubmit={handleSubmit(onSubmit)}>
+    <form className="tutorial gap-2 mt-10" onSubmit={handleSubmit(onSubmit)}>
       <input
         {...register("email")}
         type="text"
