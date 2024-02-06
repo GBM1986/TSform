@@ -22,16 +22,18 @@ const App = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit: SubmitHandler<FormFields> = async (data) => {
+  const onSubmit: SubmitHandler<FormFields> = async (data, event) => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       console.log(data);
+      event.target.reset(); // Reset the form
     } catch (error) {
       setError("root", {
         message: "This email is already taken",
       });
     }
   };
+  
 
   return (
     <form className="tutorial gap-2" onSubmit={handleSubmit(onSubmit)}>
