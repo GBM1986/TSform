@@ -2,7 +2,8 @@
   "name": "tsform",
   "private": true,
   "version": "0.0.0",
-  "type": "commonjs","module": "esm/index.html",
+  "type": "commonjs",
+  "module": "esm/index.html",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
